@@ -1,7 +1,6 @@
 #! /bin/python
 # _*_ ecoding: utf-8 _*_
 import sys, os
-import socket
 from datetime import datetime
 ##################################
 from pyftpdlib.authorizers import DummyAuthorizer
