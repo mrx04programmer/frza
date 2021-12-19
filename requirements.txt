@@ -1,0 +1,7 @@
+requests
+argparse
+pathlib
+datetime
+pyftpdlib
+paramiko
+
