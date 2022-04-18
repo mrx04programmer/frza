@@ -81,7 +81,7 @@ try:
     dic['name'] = str(input(C+'Nombre >> '+W))
     dic['lastname'] = str(input(C+'Apellido >> '+W))
     dic['nickname'] = str(input(C+'Apodo >> '+W))
-    dic['nacimiento'] = str(input(C+'Fecha de Nacimiento(DD/MM/AA)>> '+W))
+    dic['nacimiento'] = str(input(C+'Fecha de Nacimiento(DD/MM/AAAA)>> '+W))
     dic['email'] = str(input(C+'Email >> '+W))
     dic['skin'] = str(input(C+'Color de Piel >> '+W))
     dic['gender'] = str(input(C+'Género(Hombre/Mujer) >> '+W))

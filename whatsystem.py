@@ -29,6 +29,7 @@ def banner():
     print(G+"."*50)
 def start():
     ## Machines
+    windows_server = sh("ping -c1"+target+"| grep 'ttl=56' >> /dev/null")
     windows_Workgroups = sh("ping -c1 "+target+"| grep 'ttl=32' >> /dev/null")
     windows_general = sh("ping -c1 "+target+"| grep 'ttl=128' >> /dev/null")
     windows_general2 = sh("ping -c1 "+target+"| grep 'ttl=118' >> /dev/null")
@@ -50,6 +51,9 @@ def start():
     if windows_Workgroups == 0:
         print(frza+ok+'Objetivo escaneado correctamente')
         print(frza+ok+'Sistema Operativo Windows Workgroups')
+    if windows_server == 0:
+        print(frza+ok+'Objetivo escaneado correctamente')
+        print(frza+ok+'Sistema Operativo Windows Server')
     if linux == 0:
         print(frza+ok+'Objetivo escaneado correctamente')
         print(frza+ok+'Sistema Operativo Linux')
