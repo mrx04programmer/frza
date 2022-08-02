@@ -7,7 +7,7 @@
 - @Frza : El proyecto como tal que busca testing y attack en tokens en usuarios de cualquier plataforma según sus cookies (CookiesAttackRequest).
 - ObjGenerator : Crear objetos en texto organizadamente para sus usos personales
 - ServerFTP : Igual que el servidor Http busca tener comunicación entre dispositivos y sus diferentes pruebas.
--SSH Valider : Encuentra si un dispositivo tiene conexión de SSH y envia un comando al mismo, realizando así, automatización de comandos en SSH.
+- SSH Valider : Encuentra si un dispositivo tiene conexión de SSH y envia un comando al mismo, realizando así, automatización de comandos en SSH.
 
 ### Instalación
 Para su instalación se requiere tener python3.8 instalado e instalar los requerimientos para uso de sus modulos en el proyecto. Para ello ejecutar:
