@@ -37,7 +37,7 @@ def banner():
     print(G+"."*50)
 def start():
     #cabeceras = {'cache-control': 'no-cache', 'accept': 'text/html'} 
-    r = requests.get(target)
+    r = requests.post(target)
     url = r.url
     reason = r.reason
     content = r.text
